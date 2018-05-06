@@ -1,0 +1,51 @@
+{
+  "name": "fix-booking.com",
+  "version": "0.0.0",
+  "author": "Jared Ross",
+  "description": "Make Booking.com a little bit better. More to come.",
+  "private": true,
+  "main": "src/js/main.js",
+  "browserslist": [
+    "Chrome > 64"
+  ],
+  "scripts": {
+    "build": "parcel build src/js/content.js src/js/background.js -d src/build/ -o main.js",
+    "watch": "parcel watch src/js/content.js src/js/background.js -d src/build/ -o main.js --hmr-hostname localhost"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "classnames": "^2.2.5",
+    "immutable": "^3.8.2",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "parcel-bundler": "^1.6.2",
+    "query-string": "^6.1.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "styled-components": "^3.2.6"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "chrome": false
+    },
+    "rules": {
+      "no-console": "off"
+    }
+  }
+}

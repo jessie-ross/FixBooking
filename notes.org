@@ -1,0 +1,36 @@
+* Tasks
+** TODO [#A] Fix Renew Session for forms
+*** DONE Urls
+CLOSED: [2018-05-08 Tue 19:57]
+- State "DONE"       from "WAIT"       [2018-05-08 Tue 19:57]
+*** DONE Forms
+CLOSED: [2018-05-08 Tue 21:46]
+- State "DONE"       from "TODO"       [2018-05-08 Tue 21:46]
+*** TODO Messaging
+** DONE [#A] Detect Renew Session
+CLOSED: [2018-05-11 Fri 14:20]
+- State "DONE"       from "TODO"       [2018-05-11 Fri 14:20]
+*** DONE Send messages to background
+CLOSED: [2018-05-11 Fri 13:35]
+- State "DONE"       from "TODO"       [2018-05-11 Fri 13:35]
+*** DONE Recieve messages in background
+CLOSED: [2018-05-11 Fri 13:35]
+- State "DONE"       from "TODO"       [2018-05-11 Fri 13:35]
+*** DONE Make sure it all works together
+CLOSED: [2018-05-11 Fri 14:20]
+- State "DONE"       from "TODO"       [2018-05-11 Fri 14:20]
+** CANCELED [#B] Detect Login
+CLOSED: [2018-05-11 Fri 13:34]
+- State "CANCELED"   from "TODO"       [2018-05-11 Fri 13:34]
+This ends up being unneccessary
+** TODO [#B] Detect Staleness
+*** Test periodically in the background.
+*** If a page is fresh it is good
+** TODO Work out Fore/Back messaging bug
+*** Trying to fix Magit
+CLOCK: [2018-05-14 Mon 19:03]--[2018-05-14 Mon 19:46] =>  0:43
+* Doc
+This extension only deals with Session.
+It keeps the bare minimum in state.
+The background script remembers only the last working session.
+It then tells all subscribed content scripts to update their session.

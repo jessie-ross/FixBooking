@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="0.91 r13725"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 354.33071 354.33071"
+   height="100mm"
+   width="100mm"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="/Users/jaredross/side-projects/fix-booking.com/design/icon.png"
+   inkscape:export-xdpi="32.509998"
+   inkscape:export-ydpi="32.509998">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4299"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#12347b;stop-opacity:1;"
+         offset="0"
+         id="stop4301" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="37"
+     inkscape:window-height="755"
+     inkscape:window-width="1276"
+     inkscape:snap-path-mask="true"
+     inkscape:snap-path-clip="true"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     showgrid="true"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="112.75595"
+     inkscape:cx="196.6662"
+     inkscape:zoom="1.1313708"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <sodipodi:guide
+       position="129.00763,267.93892"
+       orientation="1,0"
+       id="guide4150" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid4158"
+       units="mm"
+       spacingx="35.43307"
+       spacingy="35.43307"
+       dotted="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-698.0315)">
+    <path
+       style="fill:#12347b;fill-opacity:1;fill-rule:evenodd;stroke:#0b2048;stroke-width:15.05900002;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 156.29494,708.08663 -41.99534,41.99534 0,41.99535 41.99534,41.99536 0,209.97672 41.99534,0 0,-209.97672 41.99536,-41.99536 0,-41.99535 -41.99536,-41.99534 15.02602,59.24195 -36.46563,36.68117 -33.81398,-35.79728 z"
+       id="path4172"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="32.509998"
+       inkscape:export-ydpi="32.509998"
+       sodipodi:nodetypes="cccccccccccccc" />
+  </g>
+</svg>
