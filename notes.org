@@ -1,5 +1,7 @@
 * Tasks
-** TODO [#A] Fix Renew Session for forms
+** DONE [#A] Fix Renew Session for forms
+CLOSED: [2018-05-19 Sat 19:41]
+- State "DONE"       from "TODO"       [2018-05-19 Sat 19:41]
 *** DONE Urls
 CLOSED: [2018-05-08 Tue 19:57]
 - State "DONE"       from "WAIT"       [2018-05-08 Tue 19:57]
@@ -26,7 +28,9 @@ This ends up being unneccessary
 ** TODO [#B] Detect Staleness
 *** Test periodically in the background.
 *** If a page is fresh it is good
-** TODO Work out Fore/Back messaging bug
+** DONE Work out Fore/Back messaging bug
+CLOSED: [2018-05-19 Sat 19:41]
+- State "DONE"       from "TODO"       [2018-05-19 Sat 19:41]
 *** Trying to fix Magit
 CLOCK: [2018-05-14 Mon 19:03]--[2018-05-14 Mon 19:46] =>  0:43
 * Doc

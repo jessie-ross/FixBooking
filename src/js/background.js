@@ -7,7 +7,7 @@
 // - Messaging
 
 
-import { ExtensionBackgroundI } from './extension';
+import { ExtensionBackgroundI as ExtRuntime } from './extension';
 
 // ────────────────────────────────────────────────────────────────────────────
 // Tab Broadcasting
@@ -27,7 +27,7 @@ function registerTab(id) {
 
 function broadcast(message) {
   console.log('Chrome broadcast:', message);
-  TABS.forEach(id => (ExtensionBackgroundI(id, message)));
+  TABS.forEach(id => (ExtRuntime.dispatch(id, message)));
 }
 
 window.script = this;
@@ -42,7 +42,7 @@ let _sessionSeenTime = null; /* eslint-disable-line no-underscore-dangle */
 let onUpdateSession = null;
 
 function updateSession(session) {
-  if (_session !== session) {
+  if (session && _session !== session) {
     _session = session;
     _sessionSeenTime = (new Date()).toJSON();
     onUpdateSession(session);
@@ -56,7 +56,7 @@ function updateSession(session) {
 
 // Incoming Messages
 
-ExtensionBackgroundI.subscribe('TAB ACTIVE', async (m, sender, sendResponse) => {
+ExtRuntime.subscribe('TAB ACTIVE', async (m, sender, sendResponse) => {
   // Making the little icon go from grey to black.
   window.chrome.pageAction.show(sender.tab.id);
   sendResponse();
@@ -70,14 +70,14 @@ ExtensionBackgroundI.subscribe('TAB ACTIVE', async (m, sender, sendResponse) => 
 // Additionally there is a manual session change.
 // So both of these funnel into an update session.
 
-ExtensionBackgroundI.subscribe('SESSION REGISTER', async (m, sender, sendResponse) => {
+ExtRuntime.subscribe('SESSION REGISTER', async (m, sender, sendResponse) => {
   // When a page is reloaded.
   registerTab(sender.tab.id);
   updateSession(m.session);
   sendResponse();
 });
 
-ExtensionBackgroundI.subscribe('SESSION CHANGED', async (m, sender, sendResponse) => {
+ExtRuntime.subscribe('SESSION CHANGED', async (m, sender, sendResponse) => {
   // When a session has been manually changed.
   updateSession(m.session);
   sendResponse();
