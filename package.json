@@ -1,16 +1,21 @@
 {
-  "name": "fix-booking.com",
+  "name": "FixBooking",
   "version": "0.0.0",
   "author": "Jared Ross",
   "description": "Make Booking.com a little bit better. More to come.",
   "private": true,
-  "main": "src/js/main.js",
+  "main": "src/js/content.js",
   "browserslist": [
     "Chrome > 64"
   ],
   "scripts": {
-    "build": "parcel build src/js/content.js src/js/background.js -d src/build/ -o main.js",
-    "watch": "parcel watch src/js/content.js src/js/background.js -d src/build/ -o main.js --hmr-hostname localhost"
+    "build": [
+      "parcel build src/js/content.js -d src/build/ -o content.js && parcel build src/js/background.js -d src/build/ -o background.js"
+    ],
+    "watch": [
+      "parcel watch src/js/content.js -d src/build/ -o content.js --hmr-hostname localhost",
+      "parcel watch src/js/background.js -d src/build/ -o background.js --hmr-hostname localhost"
+    ]
   },
   "dependencies": {
     "axios": "^0.18.0",

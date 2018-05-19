@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
 
-  "name": "Fix Booking.com",
+  "name": "FixBooking",
   "description": "Make Booking.com Better.",
   "version": "1.0",
 
@@ -9,6 +9,13 @@
     "scripts": ["src/build/background.js"],
     "persistent": false
   },
+
+  "content_scripts": [
+    {
+      "matches": ["http://admin.booking.com/*","https://admin.booking.com/*"],
+      "js": ["src/build/content.js"]
+    }
+  ],
 
   "page_action": {
     "default_icon": "design/icon.png",
@@ -20,11 +27,5 @@
     "tabs"
   ],
 
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "content_scripts": [
-    {
-      "matches": ["http://admin.booking.com/*","https://admin.booking.com/*"],
-      "js": ["src/build/main.js"]
-    }
-  ]
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
