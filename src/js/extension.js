@@ -3,8 +3,8 @@
 
 function subscribe(type, callback) {
   window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    console.log('Chrome Message:', message, sender);
     if (typeof message === 'object' && message.type && message.type === type) {
+      console.log('Chrome Message:', message, sender);
       callback(message, sender, sendResponse);
     }
 
