@@ -34,7 +34,12 @@ CLOSED: [2018-05-19 Sat 19:41]
 *** Trying to fix Magit
 CLOCK: [2018-05-14 Mon 19:03]--[2018-05-14 Mon 19:46] =>  0:43
 * Doc
-This extension only deals with Session.
+This extension only deals with session fixing (for now).
 It keeps the bare minimum in state.
-The background script remembers only the last working session.
-It then tells all subscribed content scripts to update their session.
+** Foreground (content.js)
+- Detects the current session, sends it to background.
+- Waits for session changes, updates in new sessions.
+- Can also perform manual session changes.
+** Background (background.js)
+- Remembers the last recieved session (the "freshest" session).
+- Informs any connected tabs of session changes.
