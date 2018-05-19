@@ -1,3 +1,20 @@
+* Copyright, Licensing and Warranty
+Copyright © 2018 Jared Ross <jared.b.ross@gmail.com>
+
+All Rights Reserved
+
+Additionally this code is provided under the Mozilla Public License 2.0
+For more information see LICENSE.txt
+* Doc
+This extension only deals with session fixing (for now).
+It keeps the bare minimum in state.
+** Foreground (content.js)
+- Detects the current session, sends it to background.
+- Waits for session changes, updates in new sessions.
+- Can also perform manual session changes.
+** Background (background.js)
+- Remembers the last recieved session (the "freshest" session).
+- Informs any connected tabs of session changes.
 * Tasks
 ** DONE [#A] Fix Renew Session for forms
 CLOSED: [2018-05-19 Sat 19:41]
@@ -33,13 +50,3 @@ CLOSED: [2018-05-19 Sat 19:41]
 - State "DONE"       from "TODO"       [2018-05-19 Sat 19:41]
 *** Trying to fix Magit
 CLOCK: [2018-05-14 Mon 19:03]--[2018-05-14 Mon 19:46] =>  0:43
-* Doc
-This extension only deals with session fixing (for now).
-It keeps the bare minimum in state.
-** Foreground (content.js)
-- Detects the current session, sends it to background.
-- Waits for session changes, updates in new sessions.
-- Can also perform manual session changes.
-** Background (background.js)
-- Remembers the last recieved session (the "freshest" session).
-- Informs any connected tabs of session changes.
