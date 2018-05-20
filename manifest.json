@@ -18,8 +18,7 @@
   ],
 
   "page_action": {
-    "default_icon": "design/icon.png",
-    "default_popup": "src/popup.html"
+    "default_icon": "design/icon.png"
   },
 
   "permissions": [
