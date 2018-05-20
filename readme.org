@@ -23,8 +23,6 @@ npx parcel watch src/js/content.js -d src/build/ -o content.js --hmr-hostname lo
 npx parcel watch src/js/background.js -d src/build/ -o background.js --hmr-hostname localhost
 #+END_SRC
 ** Building
-__Remove the dangerous Content Security Policy from `manifest.json` (It is there for HMR)__
-
 Run:
 #+BEGIN_SRC bash
 npm run build
