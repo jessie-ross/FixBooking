@@ -1,20 +1,24 @@
-* Copyright, Licensing and Warranty
-Copyright © 2018 Jared Ross <jared.b.ross@gmail.com>
+* FixBooking
+A Chrome extension that aims to fix admin.booking.com's session
+issues.
 
-All Rights Reserved
+Right now it just prevents the invalidation of other tabs you have
+open when you log in, and it allows you to manually refresh a stale
+session.
 
-Additionally this code is provided under the Mozilla Public License 2.0
-For more information see LICENSE.txt
-* Doc
+It provides a small React/Redux interface injected into the page.
+
+** How it works
 This extension only deals with session fixing (for now).
 It keeps the bare minimum in state.
-** Foreground (content.js)
-- Detects the current session, sends it to background.
-- Waits for session changes, updates in new sessions.
-- Can also perform manual session changes.
-** Background (background.js)
+*** Foreground (content.js)
+- On load, detects the current session, notifies Background.
+- Waits for Background session changes, updates in new sessions.
+- Can also perform manual session changes, notifies Background.
+*** Background (background.js)
 - Remembers the last recieved session (the "freshest" session).
 - Informs any connected tabs of session changes.
+
 * Running
 ** Developing
 Run both of these:
@@ -22,43 +26,37 @@ Run both of these:
 npx parcel watch src/js/content.js -d src/build/ -o content.js --hmr-hostname localhost
 npx parcel watch src/js/background.js -d src/build/ -o background.js --hmr-hostname localhost
 #+END_SRC
+
+Then in Chrome, go to chrome://extensions and click on Load Unpacked
+Extension and select this folder.
+
 ** Building
 Run:
 #+BEGIN_SRC bash
 npm run build
 #+END_SRC
-* Tasks
-** DONE [#A] Fix Renew Session for forms
-CLOSED: [2018-05-19 Sat 19:41]
-- State "DONE"       from "TODO"       [2018-05-19 Sat 19:41]
+
+* Copyright, Licensing and Warranty
+Copyright © 2018 Jared Ross <jared.b.ross@gmail.com>
+All Rights Reserved
+
+Additionally this code is provided under the Mozilla Public License 2.0
+For more information see LICENSE.txt
+
+Use this code at your own risk.
+
+* Tasks                                                           :noexport:
+** DONE Fix Renew Session for forms
 *** DONE Urls
-CLOSED: [2018-05-08 Tue 19:57]
-- State "DONE"       from "WAIT"       [2018-05-08 Tue 19:57]
 *** DONE Forms
-CLOSED: [2018-05-08 Tue 21:46]
-- State "DONE"       from "TODO"       [2018-05-08 Tue 21:46]
 *** TODO Messaging
-** DONE [#A] Detect Renew Session
-CLOSED: [2018-05-11 Fri 14:20]
-- State "DONE"       from "TODO"       [2018-05-11 Fri 14:20]
+** DONE Detect Renew Session
 *** DONE Send messages to background
-CLOSED: [2018-05-11 Fri 13:35]
-- State "DONE"       from "TODO"       [2018-05-11 Fri 13:35]
 *** DONE Recieve messages in background
-CLOSED: [2018-05-11 Fri 13:35]
-- State "DONE"       from "TODO"       [2018-05-11 Fri 13:35]
 *** DONE Make sure it all works together
-CLOSED: [2018-05-11 Fri 14:20]
-- State "DONE"       from "TODO"       [2018-05-11 Fri 14:20]
-** CANCELED [#B] Detect Login
-CLOSED: [2018-05-11 Fri 13:34]
-- State "CANCELED"   from "TODO"       [2018-05-11 Fri 13:34]
-This ends up being unneccessary
-** TODO [#B] Detect Staleness
+** DONE Work out Fore/Back messaging bug
+** TODO Detect Staleness
 *** Test periodically in the background.
 *** If a page is fresh it is good
-** DONE Work out Fore/Back messaging bug
-CLOSED: [2018-05-19 Sat 19:41]
-- State "DONE"       from "TODO"       [2018-05-19 Sat 19:41]
-*** Trying to fix Magit
-CLOCK: [2018-05-14 Mon 19:03]--[2018-05-14 Mon 19:46] =>  0:43
+** TODO Renew session in Background thread
+** TODO Save messages as a safety measure
