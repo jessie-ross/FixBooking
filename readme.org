@@ -1,10 +1,9 @@
 * FixBooking
 A Chrome extension that aims to fix admin.booking.com's session
-issues.
+issues:
 
-Right now it just prevents the invalidation of other tabs you have
-open when you log in, and it allows you to manually refresh a stale
-session.
+- Prevents invalidation of other tabs on login.
+- Allows manually refreshing the session without logging you out.
 
 It provides a small React/Redux interface injected into the page.
 
